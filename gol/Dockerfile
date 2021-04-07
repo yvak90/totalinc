@@ -3,7 +3,6 @@ RUN git clone https://github.com/wakaleo/game-of-life.git && cd game-of-life && 
 
 
 FROM tomcat:8
-LABEL author="khaja"
-LABEL organization="QualityThought"
+LABEL author="ajay"
 COPY --from=mvn /game-of-life/gameoflife-web/target/gameoflife.war /usr/local/tomcat/webapps/gameoflife.war
 EXPOSE 8080
