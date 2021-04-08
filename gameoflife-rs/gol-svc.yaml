@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gol-svc
+spec:
+  type: NodePort
+  selector:
+    app: gol
+  ports:
+    - targetPort: 8080
+      port: 8080
+      nodePort: 32766
